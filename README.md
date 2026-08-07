@@ -34,12 +34,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./assets/images/final-age-calculator.png)
+![](./final-age-calculator.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://github.com/pattcaroline/age-calculator-app)
+- Live Site URL: [Live Age Calculator](https://pattcaroline.github.io/age-calculator-app/index.html)
 
 ## My process
 
@@ -48,6 +48,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+- Javascript
 - Mobile-first workflow
 - Tailwind CSS
 
@@ -55,7 +56,9 @@ Users should be able to:
 
 I learned more about Tailwind CSS. I learned how to add the text-preset styles and how to use with Tailwind CSS. It does speed up the process of styling the page close to the design provided.
 
-Also, I learned more about ARIA accessibility. And I'm very proud of the javascript logic I created by myself!
+Also, I learned more about ARIA accessibility and the importance of adding ARIA.
+
+And I'm very proud of the javascript logic I created by myself! I did use Claude to help me figure out some validity checks bugs I was getting. For instance, the leap year case.
 
 ### Useful resources
 
