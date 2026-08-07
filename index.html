@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/age-calculator-app/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Font Family -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,15 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Age Calculator</title>
-    <script type="module" crossorigin src="/age-calculator-app/assets/index-i0zLXg0m.js"></script>
-    <link rel="stylesheet" crossorigin href="/age-calculator-app/assets/index-uq5dYnSs.css">
   </head>
   <body
-    class="flex flex-col justify-start items-center bg-grey-100 font-poppins"
+    class="flex flex-col justify-center items-center bg-grey-100 font-poppins min-h-screen"
   >
     <main
-      class="flex flex-col justify-center items-center w-full max-w-sm py-12 px-6 bg-white rounded-3xl rounded-br-[100px] md:max-w-2xl md:p-14 lg:max-w-4xl"
+      class="flex flex-col justify-center items-center w-full max-w-sm py-12 px-6 bg-white rounded-3xl rounded-br-[100px] overflow-hidden md:max-w-2xl md:p-14 md:rounded-br-[200px] lg:max-w-4xl"
     >
       <form
         id="age-form"
@@ -41,10 +40,12 @@
               name=""
               id="day"
               placeholder="DD"
-              class="border border-grey-200 w-full rounded-lg py-2 px-4 text-preset-4 font-bold uppercase md:w-40 md:text-preset-3 md:px-6 cursor-pointer caret-purple-500 focus:outline-none"
+              aria-describedby="error-day"
+              class="border border-grey-200 w-full rounded-lg py-2 px-4 text-preset-4 font-bold uppercase md:w-40 md:text-preset-3 md:px-6 cursor-pointer caret-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500"
             />
             <small
               aria-live="assertive"
+              id="error-day"
               class="error-message hidden text-preset-6italic italic text-red-400 md:text-preset-5italic"
             ></small>
           </div>
@@ -60,10 +61,12 @@
               name=""
               id="month"
               placeholder="MM"
-              class="border border-grey-200 w-full rounded-lg py-2 px-4 text-preset-4 font-bold uppercase md:w-40 md:text-preset-3 md:px-6 cursor-pointer caret-purple-500 focus:outline-none"
+              aria-describedby="error-month"
+              class="border border-grey-200 w-full rounded-lg py-2 px-4 text-preset-4 font-bold uppercase md:w-40 md:text-preset-3 md:px-6 cursor-pointer caret-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500"
             />
             <small
               aria-live="assertive"
+              id="error-month"
               class="error-message hidden text-preset-6italic italic text-red-400 md:text-preset-5italic"
             ></small>
           </div>
@@ -80,10 +83,12 @@
               name=""
               id="year"
               placeholder="YYYY"
-              class="border border-grey-200 w-full rounded-lg py-2 px-4 text-preset-4 font-bold uppercase md:w-40 md:text-preset-3 md:px-6 cursor-pointer caret-purple-500 focus:outline-none"
+              aria-describedby="error-year"
+              class="border border-grey-200 w-full rounded-lg py-2 px-4 text-preset-4 font-bold uppercase md:w-40 md:text-preset-3 md:px-6 cursor-pointer caret-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500"
             />
             <small
               aria-live="assertive"
+              id="error-year"
               class="error-message hidden text-preset-6italic italic text-red-400 md:text-preset-5italic"
             ></small>
           </div>
@@ -98,7 +103,7 @@
               aria-label="Submit"
             >
               <img
-                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='44'%20viewBox='0%200%2046%2044'%3e%3cg%20fill='none'%20stroke='%23FFF'%20stroke-width='2'%3e%3cpath%20d='M1%2022.019C8.333%2021.686%2023%2025.616%2023%2044M23%2044V0M45%2022.019C37.667%2021.686%2023%2025.616%2023%2044'/%3e%3c/g%3e%3c/svg%3e"
+                src="./assets/images/icon-arrow.svg"
                 alt=""
                 class="w-6 h-6 md:w-11 md:h-11"
               />
@@ -110,6 +115,7 @@
       <!-- Results Display Section -->
       <section
         aria-atomic="true"
+        aria-live="polite"
         class="flex flex-col w-full text-preset-2 font-bold italic md:text-preset-1 lg:justify-start"
       >
         <div class="flex flex-row gap-2">
@@ -126,5 +132,6 @@
         </div>
       </section>
     </main>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
