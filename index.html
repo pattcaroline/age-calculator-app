@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Age Calculator</title>
+    <script type="module" crossorigin src="/assets/index-i0zLXg0m.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-uq5dYnSs.css">
+  </head>
+  <body
+    class="flex flex-col justify-start items-center bg-grey-100 font-poppins"
+  >
+    <main
+      class="flex flex-col justify-center items-center w-full max-w-sm py-12 px-6 bg-white rounded-3xl rounded-br-[100px] md:max-w-2xl md:p-14 lg:max-w-4xl"
+    >
+      <form
+        id="age-form"
+        class="flex flex-col w-full gap-8 lg:gap-0"
+        novalidate
+      >
+        <div
+          class="flex flex-row gap-4 w-full justify-between md:gap-8 lg:justify-start"
+        >
+          <!-- DAY Input -->
+          <div id="group-day" class="flex flex-col gap-2">
+            <label
+              for="day"
+              class="font-bold text-preset-6 uppercase text-grey-500 md:text-preset-5"
+              >Day</label
+            >
+            <input
+              type="number"
+              name=""
+              id="day"
+              placeholder="DD"
+              class="border border-grey-200 w-full rounded-lg py-2 px-4 text-preset-4 font-bold uppercase md:w-40 md:text-preset-3 md:px-6 cursor-pointer caret-purple-500 focus:outline-none"
+            />
+            <small
+              aria-live="assertive"
+              class="error-message hidden text-preset-6italic italic text-red-400 md:text-preset-5italic"
+            ></small>
+          </div>
+          <!-- MONTH Input -->
+          <div id="group-month" class="flex flex-col gap-2">
+            <label
+              for="month"
+              class="font-bold text-preset-6 uppercase text-grey-500 md:text-preset-5"
+              >Month</label
+            >
+            <input
+              type="number"
+              name=""
+              id="month"
+              placeholder="MM"
+              class="border border-grey-200 w-full rounded-lg py-2 px-4 text-preset-4 font-bold uppercase md:w-40 md:text-preset-3 md:px-6 cursor-pointer caret-purple-500 focus:outline-none"
+            />
+            <small
+              aria-live="assertive"
+              class="error-message hidden text-preset-6italic italic text-red-400 md:text-preset-5italic"
+            ></small>
+          </div>
+
+          <!-- YEAR Input -->
+          <div id="group-year" class="flex flex-col gap-2">
+            <label
+              for="year"
+              class="font-bold text-preset-6 uppercase text-grey-500 md:text-preset-5"
+              >Year</label
+            >
+            <input
+              type="number"
+              name=""
+              id="year"
+              placeholder="YYYY"
+              class="border border-grey-200 w-full rounded-lg py-2 px-4 text-preset-4 font-bold uppercase md:w-40 md:text-preset-3 md:px-6 cursor-pointer caret-purple-500 focus:outline-none"
+            />
+            <small
+              aria-live="assertive"
+              class="error-message hidden text-preset-6italic italic text-red-400 md:text-preset-5italic"
+            ></small>
+          </div>
+        </div>
+
+        <!--  SUBMIT Purple Button -->
+        <div class="relative flex items-center w-full py-8 md:py-12">
+          <div class="flex border h-[1px] w-full border-grey-200">
+            <button
+              id="submit"
+              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center bg-purple-500 rounded-full w-16 h-16 md:w-24 md:h-24 lg:right-0 lg:left-auto lg:translate-x-0 hover:bg-black transition-colors cursor-pointer"
+              aria-label="Submit"
+            >
+              <img
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='46'%20height='44'%20viewBox='0%200%2046%2044'%3e%3cg%20fill='none'%20stroke='%23FFF'%20stroke-width='2'%3e%3cpath%20d='M1%2022.019C8.333%2021.686%2023%2025.616%2023%2044M23%2044V0M45%2022.019C37.667%2021.686%2023%2025.616%2023%2044'/%3e%3c/g%3e%3c/svg%3e"
+                alt=""
+                class="w-6 h-6 md:w-11 md:h-11"
+              />
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Results Display Section -->
+      <section
+        aria-atomic="true"
+        class="flex flex-col w-full text-preset-2 font-bold italic md:text-preset-1 lg:justify-start"
+      >
+        <div class="flex flex-row gap-2">
+          <span id="years-result" class="text-purple-500">--</span>
+          <span>years</span>
+        </div>
+        <div class="flex flex-row gap-2">
+          <span id="months-result" class="text-purple-500">--</span>
+          <span>months</span>
+        </div>
+        <div class="flex flex-row gap-2">
+          <span id="days-result" class="text-purple-500">--</span>
+          <span>days</span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
